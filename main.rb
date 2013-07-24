@@ -5,11 +5,19 @@ set :sessions, true
 
 get '/home' do
   "Little bit of rendering some text! Hello!"
-end
+  end
 
-get '/template' do
+get '/entername' do
   erb :mytemplate
-end
+  end
+
+post '/playername' do
+  puts params['player']
+  erb :welcomeplayer
+  end
+
+
+
 
 
 
